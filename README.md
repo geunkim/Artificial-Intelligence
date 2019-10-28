@@ -27,3 +27,7 @@
 
 * F. Richard Yu, "From the Internet of Information to the Internet of Intelligence," arXiv:1909.08068v1
 
+### Articles
+
+* [Mozilla's Approach to Trustworthy Artificial Intelligence (AI)](https://foundation.mozilla.org/en/blog/mozillas-approach-to-trustworthy-artificial-intelligence-ai/?utm_source=newsletter-mofo&utm_medium=email&utm_campaign=AIwhatweredoing&utm_term=5167532)
+
