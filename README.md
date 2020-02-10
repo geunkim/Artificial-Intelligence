@@ -8,6 +8,14 @@
 음성 인식, 스마트폰에서 가능한 이미지 자동 분류 스펨 메일 감지, 주식 시장, 의료 분야, 자동 주행 차량, 각종 로봇이난 드론 
 
 
+## 딥러닝 프레임워크 
+
+* 텐서플로(TensorFlow)
+* 터치(Touch)
+* 파이터치(PhyTouch)
+* 케라스(Keras)
+
+
 ## 참고 자료 (Refereces) 
 
 ### 인터넷 정보
@@ -17,6 +25,14 @@
 [텐서플로 볼로그](tensorflowkorea.wordpress.com)
 
 [홍대 머신러닝 스터디](meetup.com/Hongdae-Machin-Learning-Study)
+
+[
+
+### 자원 
+
+* 주피터 노트북(Jupiter Notebook) 
+
+
 
 ### Books
 
