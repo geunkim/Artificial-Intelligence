@@ -45,7 +45,7 @@
 
 * [조르디 토레스](https://torres.ai/publicaciones-investigacion/) "텐서플로 첫걸음" (한빛미디어) - [관련 소스 코드](http://git.io/v64JG) (*Deep Learning*)
 * [책 볼로그](https://tensorflow.blog/tag/jordi-torres/)
-* [프랑소와숄레 - 케라스 창시자에게 배우는 딥러닝 소스 코드](https://github.com/rickiepark/deep-learning-with-python-notebook/)
+* 프랑소와숄레 - 케라스 창시자에게 배우는 딥러닝 - [관련 소스 코드](https://github.com/rickiepark/deep-learning-with-python-notebook/)
 
 
 ### Papers
