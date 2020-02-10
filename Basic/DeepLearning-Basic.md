@@ -1,6 +1,6 @@
 # 딥러닝 기초(Deep Learing - Basic)
 
-<img src="./primeinfograph.png" width="600" height="400">
+<img src="../primeinfograph.png" width="600" height="400">
 <인공지능-머신러닝-뉴럴네트워크-딥러닝의 관계>
 딥러닝은 신경망의 한 종류이고 신경망은 머신러닝의 한 가지 방법, 머신러닝은 인공지능을 실현하는데 필요한 기술이다.  
 기존의 머신러닝 방식으로 처리가 어려운 문제를 딥러닝으로 해결하려는 시도가 많아지고 있다. 
@@ -24,7 +24,7 @@
 ## 딥 러닝 알고리즘과 신경망 구조
 퍼셉트론(Perceptron): 하나의 신경세포를 인공적으로 모델링한 뉴런 
 
-<img src="./cnn-computer-vision.png" width="600" height="400">
+<img src="../cnn-computer-vision.png" width="600" height="400">
 (출처: https://www.slideshare.net/jbhuang/lecture-29-convolutional-neural-networks-computer-vision-spring2015)
 
 퍼셉트론은 1957년 프랑크 로젠블라드(Frank Rosenblatt)에 의해 처음 고안된 오래된 알고리즘이다. 앞의 왼쪽 그림은 생물학적인 뉴런(neuron)을 나타내고 있다. 
