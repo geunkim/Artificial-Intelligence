@@ -62,6 +62,7 @@
 * [책 볼로그](https://tensorflow.blog/tag/jordi-torres/)
 * 프랑소와숄레 - 케라스 창시자에게 배우는 딥러닝 - [관련 소스 코드](https://github.com/rickiepark/deep-learning-with-python-notebook/)
   + 소스코드 동작 환경: Python 3.6, Keras 2.2 
+* 루카 미사론 등 - 실전 활용! 텐서플로 딥러닝 프로젝트
 
 ### Papers
 
