@@ -99,7 +99,7 @@
 * 언어를 번역하고 음성을 인식하는 분야
 * 자동차 자율주행 자동차 개발 및 예술 분야 
 
-* CNN(Convolution Neural Network): 합성곱 신경망
+* CNN(Convolution Neural Networks): 합성곱 신경망
 
 이미지 안의 물체를 인식하거나 이미지의 장면을 글로 요약하는데 사용하는 구조로  
 스탠포트 대학의 비전 랩에서 2015년 말 이미지의 장면을 자시히 글로 요약해주는 덴스갭(DenseGap) 을 개발하여 공개하였다.
@@ -107,7 +107,7 @@
 딥드림은 영화 "인셉션"의 이름을 딴 **인셉셔니즘**이라 하기도 한다.
 페이스북은 CNN과 RNN을 조합하여 텍스트 분석 엔진인 딥텍스트(DeepText)를 발표하였다. 
 
-* RNN(Recursive Neural Network): 순환 신경망
+* RNN(Recurrent Neural Networks): 순환 신경망
 번역이나 음성인식 분야에 주로 사용된다. 구글의 [Magenta 프로젝트](https://magenta.tensorflow.org/)는 RNN을 이용하여 음악을 작곡하는 시도를 하고 있다. 
 
 * 딜 러닝 연구에 사용되는 라이브러리
@@ -133,4 +133,5 @@
 2. 허민석, 나의 첫 머신러닝/딥러닝 - 위키북스
 3. 히로키 타니오카 & 코우신, 가장 쉬원 딥러닝 입문 교실 - 위키북스 
 4. 조리드 토레스 - 텐서플로 첫걸음 - 한빛미디어
+5. [CNN for Visual Recognition](http://aikore.org/cs231n) 
 
