@@ -126,7 +126,7 @@
 
 ## Deep Learning Framework
 * Facebook의 인공지는 연구 결과들
-  + 딤마스크(DeepMask), 사프마스크(SharpMask), 멀티패스넷(MultiPathNet): 이미지 안에 있는 물체의 모양을 정확히 구분하고 분류한다. 
+  + 딥마스크(DeepMask), 사프마스크(SharpMask), 멀티패스넷(MultiPathNet): 이미지 안에 있는 물체의 모양을 정확히 구분하고 분류한다. 
 
 ## References
 1. https://sacko.tistory.com/10
