@@ -47,12 +47,14 @@
 
 [박해선 블로그](https://tensorflow.blog)
 
+[AI Korea](http://aikorea.org)
+
 
 ### 환경
 
-* 아나콘다(Anaconda)
-* 주피터 노트북(Jupyter notebook) 
-* 코랩(Colab)
+* [아나콘다(Anaconda)](http://anaconda.com)
+* [주피터 노트북(Jupyter notebook)](http://jupyter.org) 
+* [코랩(Colab)](https://colab.research.google.com/notebooks/intro.ipynb)
 
 ### Books
 
