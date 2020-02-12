@@ -67,6 +67,7 @@
 ### Papers
 
 * F. Richard Yu, "From the Internet of Information to the Internet of Intelligence," arXiv:1909.08068v1
+* Md. Z. Alom, et. al., ["A State-of-the-Art Survey on Deep Learning Theory and Architectures,"](https://www.mdpi.com/2079-9292/8/3/292)
 
 ### Articles
 
