@@ -41,7 +41,9 @@
 
 [텐서플로 코리아](facebook.com/groups/TensorFlowKR)
 
-[텐서플로 볼로그](tensorflowkorea.wordpress.com)
+[텐서플로 볼로그: tensorflowkorea.wordpress.com] (deprecated)
+
+[텐서플로우](https://tensorflow.org) 
 
 [홍대 머신러닝 스터디](meetup.com/Hongdae-Machin-Learning-Study)
 
