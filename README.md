@@ -52,11 +52,18 @@
 [AI Korea](http://aikorea.org)
 
 
+
+### Study Site
+
+[Google Machine Learing Site](https://developers.google.com/machine-learning/crash-course)
+
+
 ### 환경
 
 * [아나콘다(Anaconda)](http://anaconda.com)
 * [주피터 노트북(Jupyter notebook)](http://jupyter.org) 
 * [코랩(Colab)](https://colab.research.google.com/notebooks/intro.ipynb)
+* [Micrsoft Azure Machine Learning 설명서](https://docs.microsoft.com/ko-kr/azure/machine-learning/)
 
 ### Books
 
