@@ -45,7 +45,7 @@
 
 [텐서플로우](https://tensorflow.org) 
 
-[홍대 머신러닝 스터디](meetup.com/Hongdae-Machin-Learning-Study)
+[홍대 머신러닝 스터디](https://www.meetup.com/ko-KR/Hongdae-Machine-Learning-Study/)
 
 [박해선 블로그](https://tensorflow.blog)
 
