@@ -2,7 +2,6 @@
 
 ## 딥 러닝(Deep Learning)
 
-
 ## 응용 영역
 
 * 음성 인식, 스마트폰에서 가능한 이미지 자동 분류 스펨 메일 감지, 주식 시장, 의료 분야, 자동 주행 차량, 각종 로봇이나 드론 
@@ -75,6 +74,18 @@
 * 안퇴오 컬리 등 - 케라스로 구현하는 딥러닝과 강화학습 - [관련 소스 코드](https://github.com/PacktPublishing/Deep-Learning-with-Keras/)
 * 카미시마 토시히로 - 딥러닝 제대로 정리하기
 * 타리코라시드 - 신경망 첫걸음
+
+
+### videos 
+
+* Google Developers
+  - [휄로 월드 - 머신러닝 비법 #1](https://www.youtube.com/watch?v=cKxRvEZd3Mw)  2016.3
+  - [의사 결정트리  시각화히기 - 머신러닝 비법 #2](https://www.youtube.com/watch?v=tNa99PG8hR8)
+  - [기능을 향상시키는 요소 - 머신러닝 비법 #3](https://www.youtube.com/watch?v=N9fDIAflCMY)
+  - [파이프라인을 작성해봅시다 - 머신러닝 비법 #4](https://www.youtube.com/watch?v=84gqSbLcBFE)
+  - 
+  
+
 
 ### Papers
 
