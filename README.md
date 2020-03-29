@@ -44,6 +44,9 @@
 
 [텐서플로우](https://tensorflow.org) 
 
+[케라스 창시자로부터 배우는 TensorFlow 2.0 + Keras 특강](https://colab.research.google.com/drive/1Nz6RkuBOEh_Ah11NSRKRO_YCt1C-8Eze)
+  - 박창선 님의 번역본에서 TensorFlow 설치부분만 제거
+
 [홍대 머신러닝 스터디](https://www.meetup.com/ko-KR/Hongdae-Machine-Learning-Study/)
 
 [박해선 블로그](https://tensorflow.blog)
