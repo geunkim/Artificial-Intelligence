@@ -56,7 +56,27 @@ MacOS X 사용자는 다음 명령을 싱행한다.
 ```
 
 
-### Colab 사용환경 준비
+### Collaboratory(Colab) 사용환경 준비
+
+* 사전 요구사항 
+  -  Google 계정
+* Site: [https://colab.research.google.com](https://colab.research.google.com)
+* Colab 특징
+  - Colab을 사용하여 브라우저에서 Python 프로그램을 작성하고 실행할 수 있다. 
+    + GPU 무료 액세스
+    + 간편한 공유 
+  
+* 사이트 방문 후 "파일-> 드라이브에 사본 복사"를 클릭하여 구글 드리아버에 'Colab Notebook' 디렉토리가 생성한다.
+
+* [예제 소스 1](https://github.com/mycampus-io): Math for Deep Learning
+
+### Cognitive classs Labs
+
+* IBM Skill Network Labs
+ - 데이터 사이언스, 머신 러닝, AI 스킬을 연습할 수 있는 장소
+ - 파이썬, R, 스칼라에서 새로운 스킬을 익히기 위해 필요한 패키지와 
+ Apache Spark에 설치된 JupyterLab, Zeppelin, RStudio를 액세스한다.
+* Site:[https://labs.cognitiveclass.ai/](https://labs.cognitiveclass.ai/)
 
 
  
