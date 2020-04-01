@@ -103,3 +103,14 @@ network.add(layers.Dense(10, actiation='softmax'))
 3. 테스트 데이터 셋을 활용하여 정립한 모델을 평가한다. 
 
 
+## 학습 사이트
+
+* [신경망 만들어보고 실습해보기](https://developers.google.com/machine-learning/crash-course/introduction-to-neural-networks/playground-exercises)
+* [Forward Propagation](https://colab.research.google.com/drive/1f9_CgOaV0jlJeRnzgim6NNCox4LYY3ue?authuser=2#scrollTo=iuYFBtvQmFeU)
+ - 신경망의 Forward Propagation 의 파러미터 설졍 이해 
++ [역전파 알고리즘 이해](https://developers-dot-devsite-v2-prod.appspot.com/machine-learning/crash-course/backprop-scroll)
+
+ 
+
+
+
