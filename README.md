@@ -61,7 +61,9 @@
 
 ### Study Site
 
-[Google Machine Learing Site](https://developers.google.com/machine-learning/crash-course)
+* [Google Machine Learing Site](https://developers.google.com/machine-learning/crash-course)
+* [TensorFlow PlayGround](http://playground.tensorflow.org)
+  - 사용자가 직접 신경망을 훈련하고 과정을 볼 수 있도록 구현한 웹페이지
 
 
 ### 환경
