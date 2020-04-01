@@ -107,8 +107,11 @@ network.add(layers.Dense(10, actiation='softmax'))
 
 * [신경망 만들어보고 실습해보기](https://developers.google.com/machine-learning/crash-course/introduction-to-neural-networks/playground-exercises)
 * [Forward Propagation](https://colab.research.google.com/drive/1f9_CgOaV0jlJeRnzgim6NNCox4LYY3ue?authuser=2#scrollTo=iuYFBtvQmFeU)
- - 신경망의 Forward Propagation 의 파러미터 설졍 이해 
-+ [역전파 알고리즘 이해](https://developers-dot-devsite-v2-prod.appspot.com/machine-learning/crash-course/backprop-scroll)
+  - 신경망의 Forward Propagation와 관련 Tensor Flow를 활용하여 네트워크를 구성하고 weight 설정 및 출력 값 계산
+* [학습률 최적화](https://developers.google.com/machine-learning/crash-course/fitter/graph)
+  - Gradient Decent의 Learning Rate의 이해를 도움
+* [손실줄이기: 플레이그라운드 실습](https://developers.google.com/machine-learning/crash-course/reducing-loss/playground-exercise)
+* [역전파 알고리즘 이해](https://developers-dot-devsite-v2-prod.appspot.com/machine-learning/crash-course/backprop-scroll)
 
  
 
