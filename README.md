@@ -55,7 +55,7 @@
 
 [박해선 블로그](https://tensorflow.blog)
 
-[AI Korea](http://aikorea.org)
+[AI Korea](http://aikorea.org): 인공지능을 좋아하는 사름들의 모임
 
 
 
