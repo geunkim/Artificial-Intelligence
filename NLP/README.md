@@ -1,4 +1,16 @@
-# AI for NLP (Natural Language Processing) - 자연어 처리를 위한 인공지능 
+# NLP(Natural Language Processing) and AI - 자연어와 인공지능
+
+* 텍스트 전처리 (Text Preprocessing): 차연어 처리 용도에 맞게 텍스트를 사전에 처리하는 작업이다.
+크롤링 등을 통해 얻어넨 코퍼스(corpus) 데이터를 사용 용도에 맞게 토큰화(Tokenization), 정제(Cleaning), 정규화(Normalization) 등이 필요하다. 
+
+  - 토큰화 (Tokenization): 주어진 코퍼스 데이터에서 토큰(Token)이라 단위로 나누는 작업으로 토큰의 단위는 상활에 따라 다르나 보통 의미 있는 단워로 토큰을 정의힌다. 
+  - 어간 추출 (Stemming)과 표제어 추출(Lemmatization)
+  - 
+
+
+
+
+
 
 - 가짜뉴스 탐지를 위해서 자연어 처리 기능이 요구됨
 
@@ -55,4 +67,6 @@
    - [Defending Against Neural Fake News](https://arxiv.org/pdf/1905.12616.pdf)
 * [정민수 - 자연어처리(NLP)](https://medium.com/@omicro03/자연어처리-nip-6일차-언어-모델-8c823466199b)
 * [딥러닝을 이용한 자연어 처리 입문](https://wikidocs.net/book/2155)
+* [실습으로 배우는 데이터 사이언스](https://programmers.co.kr/learn/courses/21)
+
 
