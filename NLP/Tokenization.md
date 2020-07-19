@@ -1,7 +1,58 @@
-# 문장과 토큰(Sentence and Token)
+# 토큰화(Tockenization)
 
+## 문장과 토큰(Sentence and Token)
 문장은 일련의 토큰(token)으로 구성되며 텍스트 토큰은 주관적, 임의적인 성격을 갖는다. 
-문장에서 토큰을 나누는 기준은 공백(white space), 형태소(morphs), 어절, 비트숫자 등 다양하다.
+토큰화는 단어, 문자, n-gram 등의 단위로 이루어 지며, 자연어 처리를 위해서 가장 기본적으로 수행되어야 하는 작업이다.  
+
+### **단어 토큰화** 
+
+문장에서 토큰으로 나누는 작업을 토큰화(Tokenization)라고 하며 상황에 따라 다르며 의미가 있는 단위로 토큰을 정의한다.
+단어를 토큰의 기준으로 하는 것을 단어 토큰화라고 한다.
+문장에서 토큰을 나누는 기준은 공백(white space), 형태소(morphs), 어절, 비트숫자, 구두점(punctuation) 등 다양하다.
+구두점이란 마침표(.), 컴마(,), 물음표(?), 세미콜론(;), 콜론(:), 느낌표(!) 등과 같은 기호이다.
+토큰화 작업은 단순히 구두점이나 특수문자를 전부 제거하는 정제(Cleaning) 작업을 수행하는 것 만은 아니다. 구두점이나 특수문자를 
+전부 제거하여 토큰의 의미를 잃는 경우가 발생하기도 한다.
+영어는 띄어쓰기 단위로 자르면 단어 토큰이 구분이 되는데 한국어의 경우 띄어쓰기로 단어 토큰을 구분하기 어렵다. 
+
+* 단어 토큰화의 예
+
+입력: "Why you need to start strength traning today."
+
+이러한 입력으로 구두점을 제외한 토큰화 작업의 결과는 다음과 같다. 
+
+출력: 'Why', 'you', ;need', 'to', 'start', 'strength', 'traning', 'today'
+
+토큰화 작업은 구두점을 지운 뒤에 띄워쓰기(whitespace)를 기준으로 잘라내는 가장 기초적인 
+예제이다. 
+
+### 공개된 토큰 생성 함수(tokenizer)들의 성능 비교 
+
+* **wordPunctTokenizer 함수** 
+```wordPuncTokenizer```함수는 NLTK(Natural Language Tool Kit)패키지에서 제공하는 함수로 구두점을 별도로 분류하는 특징을 갖고 있어 ```Don't```를 ```Don```, ```,```, ```t```의 
+세 개의 토큰으로 분리되며 ```Jone's```를 ```Jone```, ```'```, ```s```로 다음과 같이 분리한다. 
+
+```python
+from nltk.tokenize import WordPunctTokenizer
+text = "I can't stop!, Don't be fooled by the dark sounding Mr. Jone's name."
+print(WordPunctTokenizer().tokenize(text))
+```
+``The result of WordPunctTokenizer:`` 
+
+``['I', 'can', "'", 't', 'stop', '!,', 'Don', "'", 't', 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'Mr', '.', 'Jone', "'", 's', 'name', '.']``
+
+* **text_to_word_sequence() 함수**
+케라스(keras)에서 제공하는 토큰화 도구로 ```text_to_word_sequence```를 지원한다. 
+케라스의 ```text_to_word_sequence```함수는 기본적으로 알파벳을 소문자로 변경하고 마침표, 컴마, 느낌표 등의 구두점을 제거한다. 
+``can't``, ``don't``, ``jone's``와 같은 아포스트로피는 보준한다. 
+
+```python
+from tensorflow.keras.preprocessing.text import text_to_word_sequence
+text = "I can't stop!, Don't be fooled by the dark sounding Mr. Jone's name."
+print(WordPunctTokenizer().tokenize(text))
+```
+``The result of text_to_word_sequence:`` 
+
+``['i', "can't", 'stop', "don't", 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'mr', "jone's", 'name']``
 
 ## 단어장(Vocaburary)
 자연어 처리를 위해 고려하는 단어들의 집합으로 단순한 단어의 변형 형태(예: book, books, dog, dogs)도 다른 단어로 인식한다.
@@ -44,5 +95,5 @@
   
 * Convolution Neural Network (CNN)
   - **n-gram**을 단어, 다중 단어 표현, 구절, 문장 순으로  
-  - 계
+
 
