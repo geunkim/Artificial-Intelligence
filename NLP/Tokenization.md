@@ -4,7 +4,7 @@
 문장은 일련의 토큰(token)으로 구성되며 텍스트 토큰은 주관적, 임의적인 성격을 갖는다. 
 토큰화는 단어, 문자, n-gram 등의 단위로 이루어 지며, 자연어 처리를 위해서 가장 기본적으로 수행되어야 하는 작업이다.  
 
-### **단어 토큰화** 
+## **단어 토큰화** 
 
 문장에서 토큰으로 나누는 작업을 토큰화(Tokenization)라고 하며 상황에 따라 다르며 의미가 있는 단위로 토큰을 정의한다.
 단어를 토큰의 기준으로 하는 것을 단어 토큰화라고 한다.
@@ -25,9 +25,10 @@
 토큰화 작업은 구두점을 지운 뒤에 띄워쓰기(whitespace)를 기준으로 잘라내는 가장 기초적인 
 예제이다. 
 
-### 공개된 토큰 생성 함수(tokenizer)들의 성능 비교 
+## 공개된 토큰 생성 함수(tokenizer)들의 성능 비교 
 
 * **NLTK의 wordPunctTokenizer 함수** 
+
 ```wordPuncTokenizer```함수는 NLTK(Natural Language Tool Kit)패키지에서 제공하는 함수로 구두점을 별도로 분류하는 특징을 갖고 있어 ```Don't```를 ```Don```, ```,```, ```t```의 
 세 개의 토큰으로 분리되며 ```Jone's```를 ```Jone```, ```'```, ```s```로 다음과 같이 분리한다. 
 
@@ -40,7 +41,20 @@ print(WordPunctTokenizer().tokenize(text))
 
 ``['I', 'can', "'", 't', 'stop', '!,', 'Don', "'", 't', 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'Mr', '.', 'Jone', "'", 's', 'name', '.']``
 
+* **NLTK의 TreebankWordTokenizer 함수**
+
+```python
+from nltk.tag import TreebankWordTokenizer
+tokenizer=TreebankWordTokenizer()
+text = "I can't stop!, Don't be fooled by the dark sounding Mr. Jone's name. Starting a home-based restaurant may be an ideal."
+print(tokenizer.tokenize(text))
+```
+``The result of TreebankWordTokenizer:``
+
+``['I', 'ca', "n't", 'stop', '!', ',', 'Do', "n't", 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'Mr.', 'Jone', "'s", 'name.', 'Starting', 'a', 'home-based', 'restaurant', 'may', 'be', 'an', 'ideal', '.']``
+
 * **Keras의 text_to_word_sequence() 함수**
+
 케라스(keras)에서 제공하는 토큰화 도구로 ```text_to_word_sequence```를 지원한다. 
 케라스의 ```text_to_word_sequence```함수는 기본적으로 알파벳을 소문자로 변경하고 마침표, 컴마, 느낌표 등의 구두점을 제거한다. 
 ``can't``, ``don't``, ``jone's``와 같은 아포스트로피는 보준한다. 
@@ -55,12 +69,37 @@ print(WordPunctTokenizer().tokenize(text))
 ``['i', "can't", 'stop', "don't", 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'mr', "jone's", 'name']``
 
 
-### 토큰화에서 고려할 내용 
+## 토큰화에서 고려할 내용 
 
 * **단순하게 구두점 특수 문자를 제외해서는 안된다**
 
+갖고있는 코퍼스에서 단어를 찾아내기 위해, 단순하게 구두점이나 특수 문자를 제외하는 것은 바람직하지 않다. 
+마침표(.)의 경우 문장의 경계를 나타내기 때문에 단어를 추출할 때 마침표(.)를 제외하지 않을 수 있다. 
 
+``m.p.h``, ``Ph.D``, ``AT&T``와 같이 구두점을 갖고 있는 단어도 있다. 
+화페의 단위와 날짜를 표시하기 위해서 (``$``) 와 슬래시(``/``)를 ``$43.55``, ``07/20/2020``와 같이 사용하기도 힌다.
+이 경우 ``43.55``는 43과 55를 분류하지 않고 43.55를 하나로 취급해야 한다.
 
+그리고 숫자 사이에 ``,``가 들어가는 경우도 있다. 
+
+* **줄임말과 단어 내 띄어쓰기가 있는 경우 **
+
+토큰화 과정에서 영어의 아포스트로피(')는 압축된 단어를 다시 펼치는 역할을 하기도 한다. 
+예를 들어 ``what're``와 ``we're``는 ``what are``와 ``we are``의 줄임말이다. 
+앞의 예에서 ``re``는 접어(clicit)라고 한다. 예로 ``I am``을 줄인 ``I'm``이 있을 때 ``m``을 접어라고 한다.
+
+``New York``과 ``rock 'n' roll``의 경우 하나의 단어인데 중간에 띄어쓰기가 존재한다. 
+사용 용도에 따라서 하나의 단어 사이에 띄어쓰기가 있는 경우에도 하나의 토큰으로 고려해야 하므로 토큰화 작업 시 하나의 단어로 
+인식할 수 있어야 한다. 
+
+* **표준 토큰화 예제**
+
+표준화된 토큰화된 방법 중 하나가 Penn Treebank Tokenization이 있으며 규칙은 다음과 같다. 
+
+* 규칙 1: 하이푼으로 구성된 단어는 하나로 유지한다.
+* 규칙 2: ``doesn't``와 같이 아포스트로피로 접어가 함께하는 단어는 분리해 준다. 
+
+앞의 결과를 보면 규칙 1과 규칙 2에 따라 ``home-based``는 하나의 토큰으로 취급하며 ``dosen't``의 경우 ``does``와 ``n't``는 분리된다. 
 
 ## 한국어의 토큰화
 
@@ -68,12 +107,25 @@ print(WordPunctTokenizer().tokenize(text))
 한국어의 경우 띄어쓰기 단위가 되는 단위를 '어절'이라 한다. 어절 토큰화는 단어 토큰화와 같지 않기 때문이다. 
 
 * **한국어는 교착어**
+
 한국어에는 조사라는 것이 존재한다. 한국어의 경우 '그'라는 단어 하나에 '가', '에게', '와', '를', '는' 등과 같은 다양한 조사가 
 글자 뒤에 띄어쓰기 없이 바로 붙게 된다. 한국어 자연어 처리를 할 때 같은 단어여도 다른 조사가 붙어서 다른 단어로 
 인식이 되면 자연어 처리가 힘들기 때문에 한국어 자연어 처리에서 조사의 분리가 필요하다. 
 
 즉 띄어쓰기 단위가 영어와 같이 독립적인 단어인 경우 띄어쓰기 단위로 토큰화하면 되나 한국어는 어절이 독립적인 단어로
 구성되는 것이 아니라 조사 등이 결합되어 있는 경우가 많아 이를 전부 분리하여야 한다는 것이다. 
+
+* **한국어는 띄어쓰기가 영어보다 잘 지켜지지 않는다**
+
+한국어는 영어와 달리 띄어쓰기가 어렵고 잘 지켜지지 않으나 한국어의 경우 띄어쓰기가 잘 지켜지지 않아도 글을 쉽게 이해할 수 있다. 
+반면 영어는 띄어쓰기를 하지 않으면 쉽게 알아보기 어려운 언어이다. 이는 한국어(모아쓰기 방식)와 영어(풀어쓰기 방식)라는 언어적
+특성이 원인이 있다. 
+
+## 문장 토큰화(Setence Tokenization)
+
+문장 토큰화는 코퍼스 내에서 문장 단위로 구분하는 작업으로 
+문서의 양이 많아 지는 경우 바로 단어 토큰화를 진행하지 않고 문장을 토큰화한 후 1차적으로 정제하고 단어 토큰화를 진행한다.
+NLTK에서는 문장 토큰화를 위해 ```sent_tokenize```함수를 지원한다.  
 
 
 
@@ -125,5 +177,7 @@ print(WordPunctTokenizer().tokenize(text))
 
 ## References
 * [딥 러닝을 이용한 자연어 처리 입문.텍스트 전처리.토큰화](https://wikidocs.net/21698)
+* [자연어 처리를 위한 문장 토큰화(Setence tokenization](https://leo-bb.tistory.com/4)
+
 
 
