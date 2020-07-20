@@ -27,7 +27,7 @@
 
 ### 공개된 토큰 생성 함수(tokenizer)들의 성능 비교 
 
-* **wordPunctTokenizer 함수** 
+* **NLTK의 wordPunctTokenizer 함수** 
 ```wordPuncTokenizer```함수는 NLTK(Natural Language Tool Kit)패키지에서 제공하는 함수로 구두점을 별도로 분류하는 특징을 갖고 있어 ```Don't```를 ```Don```, ```,```, ```t```의 
 세 개의 토큰으로 분리되며 ```Jone's```를 ```Jone```, ```'```, ```s```로 다음과 같이 분리한다. 
 
@@ -40,7 +40,7 @@ print(WordPunctTokenizer().tokenize(text))
 
 ``['I', 'can', "'", 't', 'stop', '!,', 'Don', "'", 't', 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'Mr', '.', 'Jone', "'", 's', 'name', '.']``
 
-* **text_to_word_sequence() 함수**
+* **Keras의 text_to_word_sequence() 함수**
 케라스(keras)에서 제공하는 토큰화 도구로 ```text_to_word_sequence```를 지원한다. 
 케라스의 ```text_to_word_sequence```함수는 기본적으로 알파벳을 소문자로 변경하고 마침표, 컴마, 느낌표 등의 구두점을 제거한다. 
 ``can't``, ``don't``, ``jone's``와 같은 아포스트로피는 보준한다. 
@@ -53,6 +53,32 @@ print(WordPunctTokenizer().tokenize(text))
 ``The result of text_to_word_sequence:`` 
 
 ``['i', "can't", 'stop', "don't", 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'mr', "jone's", 'name']``
+
+
+### 토큰화에서 고려할 내용 
+
+* **단순하게 구두점 특수 문자를 제외해서는 안된다**
+
+
+
+
+## 한국어의 토큰화
+
+한국어는 영어와 달리 띄어쓰기로 토큰화하기에 부족하다. 
+한국어의 경우 띄어쓰기 단위가 되는 단위를 '어절'이라 한다. 어절 토큰화는 단어 토큰화와 같지 않기 때문이다. 
+
+* **한국어는 교착어**
+한국어에는 조사라는 것이 존재한다. 한국어의 경우 '그'라는 단어 하나에 '가', '에게', '와', '를', '는' 등과 같은 다양한 조사가 
+글자 뒤에 띄어쓰기 없이 바로 붙게 된다. 한국어 자연어 처리를 할 때 같은 단어여도 다른 조사가 붙어서 다른 단어로 
+인식이 되면 자연어 처리가 힘들기 때문에 한국어 자연어 처리에서 조사의 분리가 필요하다. 
+
+즉 띄어쓰기 단위가 영어와 같이 독립적인 단어인 경우 띄어쓰기 단위로 토큰화하면 되나 한국어는 어절이 독립적인 단어로
+구성되는 것이 아니라 조사 등이 결합되어 있는 경우가 많아 이를 전부 분리하여야 한다는 것이다. 
+
+
+
+
+
 
 ## 단어장(Vocaburary)
 자연어 처리를 위해 고려하는 단어들의 집합으로 단순한 단어의 변형 형태(예: book, books, dog, dogs)도 다른 단어로 인식한다.
@@ -95,5 +121,9 @@ print(WordPunctTokenizer().tokenize(text))
   
 * Convolution Neural Network (CNN)
   - **n-gram**을 단어, 다중 단어 표현, 구절, 문장 순으로  
+
+
+## References
+* [딥 러닝을 이용한 자연어 처리 입문.텍스트 전처리.토큰화](https://wikidocs.net/21698)
 
 
