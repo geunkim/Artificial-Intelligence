@@ -82,7 +82,7 @@ print(WordPunctTokenizer().tokenize(text))
 
 그리고 숫자 사이에 ``,``가 들어가는 경우도 있다. 
 
-* **줄임말과 단어 내 띄어쓰기가 있는 경우 **
+* **줄임말과 단어 내 띄어쓰기가 있는 경우**
 
 토큰화 과정에서 영어의 아포스트로피(')는 압축된 단어를 다시 펼치는 역할을 하기도 한다. 
 예를 들어 ``what're``와 ``we're``는 ``what are``와 ``we are``의 줄임말이다. 
@@ -127,8 +127,31 @@ print(WordPunctTokenizer().tokenize(text))
 문서의 양이 많아 지는 경우 바로 단어 토큰화를 진행하지 않고 문장을 토큰화한 후 1차적으로 정제하고 단어 토큰화를 진행한다.
 NLTK에서는 문장 토큰화를 위해 ```sent_tokenize```함수를 지원한다.  
 
+```python
+from nltk.tokenize import sent_tokenize
 
+sent1 = "IP 192.168.56.31 서버에 들어가서 로그 파일 저장해서 ukairia777@gmail.com로 결과 좀 보내줘. 그러고나서 점심 먹으러 가자."
+sent2 = "Since I'm actively looking for Ph.D. students, I get the same question a dozen times every year."
+sent3 = "His barber kept his word. But keeping such a huge secret to himself was driving him crazy. Finally, the barber went up a mountain and almost to the edge of a cliff. He dug a hole in the midst of some reeds. He looked about, to mae sure no one was near."
 
+print("The sentence token of sent1: ")
+print(sent_tokenize(sent1))
+print("The sentence token of sent2: ")
+print(sent_tokenize(sent2))
+print("The sentence token of sent3: ")
+print(sent_tokenize(sent3))
+```
+``The sentence token of sent1:``
+
+``['IP 192.168.56.31 서버에 들어가서 로그 파일 저장해서 ukairia777@gmail.com로 결과 좀 보내줘.', '그러고나서 점심 먹으러 가자.']``
+
+``The sentence token of sent2:`` 
+
+``["Since I'm actively looking for Ph.D. students, I get the same question a dozen times every year."]``
+
+``The sentence token of sent3:`` 
+
+``['His barber kept his word.', 'But keeping such a huge secret to himself was driving him crazy.', 'Finally, the barber went up a mountain and almost to the edge of a cliff.', 'He dug a hole in the midst of some reeds.', 'He looked about, to mae sure no one was near.']``
 
 
 
@@ -177,7 +200,7 @@ NLTK에서는 문장 토큰화를 위해 ```sent_tokenize```함수를 지원한�
 
 ## References
 * [딥 러닝을 이용한 자연어 처리 입문.텍스트 전처리.토큰화](https://wikidocs.net/21698)
-* [자연어 처리를 위한 문장 토큰화(Setence tokenization](https://leo-bb.tistory.com/4)
+* [자연어 처리를 위한 문장 토큰화(Setence tokenization)](https://leo-bb.tistory.com/4)
 
 
 
