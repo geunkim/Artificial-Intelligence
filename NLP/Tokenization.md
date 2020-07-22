@@ -4,6 +4,39 @@
 문장은 일련의 토큰(token)으로 구성되며 텍스트 토큰은 주관적, 임의적인 성격을 갖는다. 
 토큰화는 단어, 문자, n-gram 등의 단위로 이루어 지며, 자연어 처리를 위해서 가장 기본적으로 수행되어야 하는 작업이다.  
 
+## 문장 토큰화(Setence Tokenization)
+
+문장 토큰화는 코퍼스 내에서 문장 단위로 구분하는 작업으로 
+문서의 양이 많아 지는 경우 바로 단어 토큰화를 진행하지 않고 문장을 토큰화한 후 1차적으로 정제하고 단어 토큰화를 진행한다.
+NLTK에서는 문장 토큰화를 위해 ```sent_tokenize```함수를 지원한다.  
+
+```python
+from nltk.tokenize import sent_tokenize
+
+sent1 = "IP 192.168.56.31 서버에 들어가서 로그 파일 저장해서 ukairia777@gmail.com로 결과 좀 보내줘. 그러고나서 점심 먹으러 가자."
+sent2 = "Since I'm actively looking for Ph.D. students, I get the same question a dozen times every year."
+sent3 = "His barber kept his word. But keeping such a huge secret to himself was driving him crazy. Finally, the barber went up a mountain and almost to the edge of a cliff. He dug a hole in the midst of some reeds. He looked about, to mae sure no one was near."
+
+print("The sentence token of sent1: ")
+print(sent_tokenize(sent1))
+print("The sentence token of sent2: ")
+print(sent_tokenize(sent2))
+print("The sentence token of sent3: ")
+print(sent_tokenize(sent3))
+```
+``The sentence token of sent1:``
+
+``['IP 192.168.56.31 서버에 들어가서 로그 파일 저장해서 ukairia777@gmail.com로 결과 좀 보내줘.', '그러고나서 점심 먹으러 가자.']``
+
+``The sentence token of sent2:`` 
+
+``["Since I'm actively looking for Ph.D. students, I get the same question a dozen times every year."]``
+
+``The sentence token of sent3:`` 
+
+``['His barber kept his word.', 'But keeping such a huge secret to himself was driving him crazy.', 'Finally, the barber went up a mountain and almost to the edge of a cliff.', 'He dug a hole in the midst of some reeds.', 'He looked about, to mae sure no one was near.']``
+
+
 ## **단어 토큰화** 
 
 문장에서 토큰으로 나누는 작업을 토큰화(Tokenization)라고 하며 상황에 따라 다르며 의미가 있는 단위로 토큰을 정의한다.
@@ -68,7 +101,6 @@ print(WordPunctTokenizer().tokenize(text))
 
 ``['i', "can't", 'stop', "don't", 'be', 'fooled', 'by', 'the', 'dark', 'sounding', 'mr', "jone's", 'name']``
 
-
 ## 토큰화에서 고려할 내용 
 
 * **단순하게 구두점 특수 문자를 제외해서는 안된다**
@@ -121,38 +153,37 @@ print(WordPunctTokenizer().tokenize(text))
 반면 영어는 띄어쓰기를 하지 않으면 쉽게 알아보기 어려운 언어이다. 이는 한국어(모아쓰기 방식)와 영어(풀어쓰기 방식)라는 언어적
 특성이 원인이 있다. 
 
-## 문장 토큰화(Setence Tokenization)
+## 품사 태깅(Part-of-speech tagging)
 
-문장 토큰화는 코퍼스 내에서 문장 단위로 구분하는 작업으로 
-문서의 양이 많아 지는 경우 바로 단어 토큰화를 진행하지 않고 문장을 토큰화한 후 1차적으로 정제하고 단어 토큰화를 진행한다.
-NLTK에서는 문장 토큰화를 위해 ```sent_tokenize```함수를 지원한다.  
+* **영문 코퍼스 품사 태깅**
+
+NLTK에서 ```pos_tag```함수를 이용하면 단어 토큰에 품사를 부착하여 투플로 출력한다. 
+영어 문장에서 단어 토큰화를 수행한 후 수행 결과에 대해서 품사를 태깅한다.
 
 ```python
-from nltk.tokenize import sent_tokenize
+from nltk.tokenize import TreebankWordTokenizer
+from nltk.tag import pos_tag
 
-sent1 = "IP 192.168.56.31 서버에 들어가서 로그 파일 저장해서 ukairia777@gmail.com로 결과 좀 보내줘. 그러고나서 점심 먹으러 가자."
-sent2 = "Since I'm actively looking for Ph.D. students, I get the same question a dozen times every year."
-sent3 = "His barber kept his word. But keeping such a huge secret to himself was driving him crazy. Finally, the barber went up a mountain and almost to the edge of a cliff. He dug a hole in the midst of some reeds. He looked about, to mae sure no one was near."
+text = "I can't stop!, Don't be fooled by the dark sounding Mr. Jone's name. Starting a home-based restaurant may be an ideal."
+tokenizer=TreebankWordTokenizer()
 
-print("The sentence token of sent1: ")
-print(sent_tokenize(sent1))
-print("The sentence token of sent2: ")
-print(sent_tokenize(sent2))
-print("The sentence token of sent3: ")
-print(sent_tokenize(sent3))
+words = tokenizer.tokenize(text);
+pos = pos_tag(words)
+
+print(pos)
+
+text1 = "Emma refused to permit us to obtain the refuse permit"
+words = tokenizer.tokenize(text1)
+pos = pos_tag(words)
+
+print(pos)
 ```
-``The sentence token of sent1:``
 
-``['IP 192.168.56.31 서버에 들어가서 로그 파일 저장해서 ukairia777@gmail.com로 결과 좀 보내줘.', '그러고나서 점심 먹으러 가자.']``
 
-``The sentence token of sent2:`` 
 
-``["Since I'm actively looking for Ph.D. students, I get the same question a dozen times every year."]``
 
-``The sentence token of sent3:`` 
 
-``['His barber kept his word.', 'But keeping such a huge secret to himself was driving him crazy.', 'Finally, the barber went up a mountain and almost to the edge of a cliff.', 'He dug a hole in the midst of some reeds.', 'He looked about, to mae sure no one was near.']``
-
+* **한국어 코퍼스 품사 태깅** 
 
 
 ## 단어장(Vocaburary)
