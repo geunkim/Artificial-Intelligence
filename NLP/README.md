@@ -1,4 +1,4 @@
-# NLP(Natural Language Processing) and AI - 자연어 와 인공지능
+# NLP(Natural Language Processing) and AI - 자연어와 인공지능
 
 * 텍스트 전처리 (Text Preprocessing): 차연어 처리 용도에 맞게 텍스트를 사전에 처리하는 작업이다.
 크롤링 등을 통해 얻어낸 코퍼스(corpus) 데이터를 사용 용도에 맞게 토큰화(Tokenization), 정제(Cleaning), 정규화(Normalization) 등이 필요하다. 
