@@ -51,6 +51,14 @@ KoNLPy를 통해서 사용할 수 있는 형태소 분석기로는 Okt(Open Kore
 
 한국어 자연어처리에서 형태소 분석기를 사용한다는 것은 단어 토큰화가 아니라 형태소 토큰화를 수행하는 것을 뜻한다. 
 
+## 한국어 문장 토큰화
+
+
+
+## 한국어 단어 토큰화
+
+
+
 ## References
 * [KoNLPy(Korean NLP in Python](https://konlpy.org/en/v0.4.4/)
 * [KoNLPy로 품사 태깅하기](https://konlpy.org/ko/latest/morph/)
