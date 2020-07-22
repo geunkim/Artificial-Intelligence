@@ -23,7 +23,8 @@
 * **품사 태깅(Part-Of-Speech tagging)**
 
 단어는 품사에 따라 의마기 달라지기 때문에 단어 토큰화를 통해 얻어진 단어들에 대해서 품사를 파악하는 것이 요구된다. 
-즉 단어의 의미를 제대로 파악하기 위해서는 해당 단어가 어떤 품사로 쓰였는지 형태소의 뜻과 문맥을 고려하여 단어에 마크업을 하는 것을 품사 태깅이라 한다.  
+즉 단어의 의미를 제대로 파악하기 위해서는 해당 단어가 어떤 품사로 쓰였는지 형태소의 뜻과 문맥을 고려하여 단어에 마크업을 하는 것을 품사 태깅이라 한다.
+품사 태깅은 언어마다 학자마다 다르다. 
 
 ## 한국어의 형태소
 
@@ -53,3 +54,5 @@ KoNLPy를 통해서 사용할 수 있는 형태소 분석기로는 Okt(Open Kore
 ## References
 * [KoNLPy(Korean NLP in Python](https://konlpy.org/en/v0.4.4/)
 * [KoNLPy로 품사 태깅하기](https://konlpy.org/ko/latest/morph/)
+* [NLTK 자연어 처리 패키지](https://datascienceschool.net/view-notebook/8895b16a141749a9bb381007d52721c1/)
+
