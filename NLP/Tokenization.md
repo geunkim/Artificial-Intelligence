@@ -164,19 +164,32 @@ NLTK에서 ```pos_tag```함수를 이용하면 단어 토큰에 품사를 부착
 from nltk.tokenize import TreebankWordTokenizer
 from nltk.tag import pos_tag
 
-text = "I can't stop!, Don't be fooled by the dark sounding Mr. Jone's name. Starting a home-based restaurant may be an ideal."
+text1 = "I can't stop!, Don't be fooled by the dark sounding Mr. Jone's name. Starting a home-based restaurant may be an ideal."
+text2 = "Emma refused to permit us to obtain the refuse permit"
+
 tokenizer=TreebankWordTokenizer()
 
-words = tokenizer.tokenize(text);
+words = tokenizer.tokenize(text1);  # text1의 단어 토큰화
 pos = pos_tag(words)
-
 print(pos)
 
-text1 = "Emma refused to permit us to obtain the refuse permit"
-words = tokenizer.tokenize(text1)
+words = tokenizer.tokenize(text2)   # text2의 단어 토큰화
 pos = pos_tag(words)
-
+print("after TreebankWordTokenizer: ")
 print(pos)
+
+tokenizer=WordPunctTokenizer()
+words = tokenizer.tokenize(text2)   # text2의 단어 토큰화
+pos = pos_tag(words)
+print("after WordPunctTokenizer: ")
+print(pos)
+
+tokenizer=WordPunctTokenizer()
+words = tokenizer.tokenize(text2)   # text2의 단어 토큰화
+pos = pos_tag(words)
+print("after WordPunctTokenizer: ")
+print(pos)
+
 ```
 
 
