@@ -245,6 +245,7 @@ print(pos)
 ## References
 * [딥 러닝을 이용한 자연어 처리 입문.텍스트 전처리.토큰화](https://wikidocs.net/21698)
 * [자연어 처리를 위한 문장 토큰화(Setence tokenization)](https://leo-bb.tistory.com/4)
+* [NLP에서의 전처리 방법](https://developer-kelvin.tistory.com/13)
 
 
 
