@@ -8,17 +8,13 @@
   - 
 
 
-
-
-
-
 - 가짜뉴스 탐지를 위해서 자연어 처리 기능이 요구됨
 
 
 ## 언어 모델 (Language Model)
 
-언어 모델은 주어진 단어들로 부터 다음에 존재할 단어의 확률을 예측하는 모델이다.   
-즉, **문장(단어의 시퀀스)의 확률을 예측**하는 모델로 자연어 생성 (Natural Language Generation)의 기반이 된다. 
+언어 모델은 **주어진 단어들로 부터 다음에 존재할 단어의 확률을 예측하는 모델**이다.   
+즉, **문장(단어의 시퀀스)의 확률을 예측**하는 모델로 자연어 생성(Natural Language Generation)의 기반이 된다. 
 문장의 확률을 예측하기 위해 이전의 단어가 주어졌을 때 다음 단어가 나올 확률을 예측해야 한다. 
 언어 모델은 문장 내 단어들의 조합이 얼마나 적절한지, 또는 해당 문장이 얼마나 적합한지 알려주는 일을 한다. 
 
@@ -42,8 +38,6 @@
     ![equation](http://latex.codecogs.com/gif.latex?P(W)=P(w_1,w_2,w_3,w_4,...,w_n)=\Pi_{n=1}^nP(w_n|w_1,w_2,..,w_{n-1}))
 
    
-
-
 ## 작성...
 
 * ETRI 액소브레인: 언어능력이 높은 인공지능 
@@ -68,5 +62,8 @@
 * [정민수 - 자연어처리(NLP)](https://medium.com/@omicro03/자연어처리-nip-6일차-언어-모델-8c823466199b)
 * [딥러닝을 이용한 자연어 처리 입문](https://wikidocs.net/book/2155)
 * [실습으로 배우는 데이터 사이언스](https://programmers.co.kr/learn/courses/21)
+* [딥러닝 기반 자연어처리 기법의 최근 연구동향](https://ratsgo.github.io/natural%20language%20processing/2017/08/16/deepNLP/)
+
+
 
 
