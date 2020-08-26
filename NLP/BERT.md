@@ -120,7 +120,17 @@ BERT를 이용한 자연어 처리는 인코더가 입력 문장들을 임베딩
 
 
 
+### Colab에서 TPU로 BERT 학습하기
 
+2020년 2월 26일자 기준 구글 Colab에서 TPU를 활성화하여 정상적으로 학습이 가능하나 TPU를 사용할 경우
+구글 클라우드 버킷(Cloud Bucket)을 사용하여야 하기 때문에 활성화된 GCP 계정이 필요하다. 
+
+Colab에서 TPU를 사용하기 위해서는 다음이 필요하다.
+
+* Google 계정 및 구글 Colab
+* GCP Storage Bucket
+
+필요한 라이브러리
 
 
 
@@ -137,3 +147,5 @@ BERT를 이용한 자연어 처리는 인코더가 입력 문장들을 임베딩
 
 * [BERT에 대해 쉽게 알아보기1 - BERT는 무엇인가, 동작구조](https://ebbnflow.tistory.com/151)
 * [BERT 톺아보기](http://docs.likejazz.com/bert/)
+* [Colab에서 TPU로 BERT 처음부터 학습시키기](https://beomi.github.io/2020/02/26/Train-BERT-from-scratch-on-colab-TPU-Tensorflow-ver/)
+
