@@ -20,10 +20,8 @@
 * 확률/통계 기반 접근법
 	- TF-IDF(Term Frequency-Inverse Document Frequency)를 이용한 키워드 추출 방법
 		+ TF: 단어가 문서에 등장한 개수 (일반적으로 TF가 높을수록 중요한 단어라 판단하나 관사, 정관사 등 중요도가 낮은 단어가 존재함)
-		+ DF: 해당 단어가 등장한 문서의 개수 (DF가 높을 수로 중요하지 않은 단어로 판단함)  
-![equation](http://latex.codecogs.com/gif.latex?w_{x,y}=tf_{x,y}*\log(N/df_{x})
-
-    - Term x within document y
+		+ DF: 해당 단어가 등장한 문서의 개수 (DF가 높을 수로 중요하지 않은 단어로 판단함) - term x withing document y
+![equation](http://latex.codecogs.com/gif.latex?W_{x,y}=tf_{x,y}*\log(\frac{N}{df_{x}})) 
 
 ## 자연어 처리 단계 
 
