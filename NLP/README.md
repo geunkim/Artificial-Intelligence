@@ -39,7 +39,7 @@
 * 토큰화(Tokenizing)
 	- 토큰화 방법에는 어절 토큰화, 형태소 토큰화, n-gram 토큰화, WordPiece 토큰화 등이 있다. 
 * 어휘 분석(Lexical analysis)
-	- 형태소 분석(morphological analysis): 입력된 문자열을 분석하여 형태소 단위로 분해하는 과정
+	- [형태소 분석(morphological analysis)](./morpheme.md): 입력된 문자열을 분석하여 형태소 단위로 분해하는 과정
 	- 개체명 인식
 	- 상호 참조
 * 구문 분석(sytantic analysis)
