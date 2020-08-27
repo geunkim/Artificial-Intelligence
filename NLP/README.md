@@ -24,11 +24,11 @@
 		
           ![equation](http://latex.codecogs.com/gif.latex?W_{x,y}=tf_{x,y}*\log(\frac{N}{df_{x}}))
 	  
-          ![equation](http://latex.codecogs.com/gif.latex?tf_{x,y}: frequency of x in y) 
+          ![equation](http://latex.codecogs.com/gif.latex?tf_{x,y}): frequency of x in y) 
 	  
-          ![equation](http://latex.codecogs.com/gif.latex?df_x: number of documents containing x) 
+          ![equation](http://latex.codecogs.com/gif.latex?df_x): number of documents containing x) 
 	  
-          ![equation](http://latex.codecogs.com/gif.latex?N: total number of documents) 
+          ![equation](http://latex.codecogs.com/gif.latex?N): total number of documents) 
 
 ## 자연어 처리 단계 
 
