@@ -1,59 +1,52 @@
-# NLP(Natural Language Processing) and AI - 자연어와 인공지능
+# NLP(Natural Language Processing) and AI - 자연어 처리와 인공지능
 
-* 텍스트 전처리 (Text Preprocessing): 차연어 처리 용도에 맞게 텍스트를 사전에 처리하는 작업이다.
-크롤링 등을 통해 얻어낸 코퍼스(corpus) 데이터를 사용 용도에 맞게 토큰화(Tokenization), 정제(Cleaning), 정규화(Normalization) 등이 필요하다. 
+## 자연어 처리
 
-  - 토큰화 (Tokenization): 주어진 코퍼스 데이터에서 토큰(Token)이라 단위로 나누는 작업으로 토큰의 단위는 상황에 따라 다르나 보통 의미 있는 단워로 토큰을 정의힌다. 
-  - 어간 추출 (Stemming)과 표제어 추출(Lemmatization)
-  - 
+자연어 처리는 우리가 일상 생활에서 사용하는 언어(자연어: natural language)를 컴퓨터가 해독하고 의미를 분석하여 이해하고 활용하는 기술이다.
 
+* 자연 언어: 특정 집단이 모국어로 사용하는 자연발생적인 언어
+* 인공 언어: 형식 언어, 프로그래밍 언어와 같이 특정 목적을 위해 인위적으로 만들어진 언어 
 
-- 가짜뉴스 탐지를 위해서 자연어 처리 기능이 요구됨
+![image](./NLP.png)
 
+<출처: 김성현 - 딥러닝 기반 자연어 언어모델 BERT 발표자료>
 
-## 언어 모델 (Language Model)
+즉 자연어 처리는 생각 또는 느낌 등을 표현할 수 있는 음성 또는 문자 등의 언어를 컴퓨터의 자연어 처리 기능에서 입력받아 음성 또는 문자를 해독하고 의미를 분석하는 것이다. 
 
-언어 모델은 **주어진 단어들로 부터 다음에 존재할 단어의 확률을 예측하는 모델**이다.   
-즉, **문장(단어의 시퀀스)의 확률을 예측**하는 모델로 자연어 생성(Natural Language Generation)의 기반이 된다. 
-문장의 확률을 예측하기 위해 이전의 단어가 주어졌을 때 다음 단어가 나올 확률을 예측해야 한다. 
-언어 모델은 문장 내 단어들의 조합이 얼마나 적절한지, 또는 해당 문장이 얼마나 적합한지 알려주는 일을 한다. 
+## 자연어 처리 방법
 
-언어 모델을 만드는 방법에는 크게 통계를 이용한 방법과 인공 신경만을 이용한 방법이 있다. 
-딥러닝 기반 자연어 처리 기술인 GPT 또는 BERT가 전부 언어 모델의 개념을 사용하여 만들었다. 
+자연어 처리 방법은 규칙/지식 기반 접근법(Symbolic approach)와 확률/통계 기반 접근법(Statistical approach)으로 구분된다.
 
-* 언어 모델이 필요한 이유?
-  - 기계 번역(Machine Translation)
-  - 오타 교정(Spell Correction)
-  - 음성 인식(Speech Recognition)
+* 확률/통계 기반 접근법
+	- TF-IDF(Term Frequency-Inverse Document Frequency)를 이용한 키워드 추출 방법
+		+ TF: 단어가 문서에 등장한 개수 (일반적으로 TF가 높을수록 중요한 단어라 판단하나 관사, 정관사 등 중요도가 낮은 단어가 존재함)
+		+ DF: 해당 단어가 등장한 문서의 개수 (DF가 높을 수로 중요하지 않은 단어로 판단함)  
+![equation](http://latex.codecogs.com/gif.latex?w_{x,y}=tf_{x,y}*\log(N/df_{x})
 
-* 언어 모델에서 예측하는 확률의 대상은?
-  - 문장 전쳬의 확률 예측
-  
-    ![equation](http://latex.codecogs.com/gif.latex?P(W)=P(w_1,w_2,w_3,w_4,...,w_n)=\Pi_{n=1}^nP(w_i))  
-  - 다음 단어 예측: 조건부 확률 적용
-   
-    ![equation](http://latex.codecogs.com/gif.latex?P(w_n|w_1,w_2,..,w_{n-1}))
-  - 전체 단어 시퀀스 예측
-  
-    ![equation](http://latex.codecogs.com/gif.latex?P(W)=P(w_1,w_2,w_3,w_4,...,w_n)=\Pi_{n=1}^nP(w_n|w_1,w_2,..,w_{n-1}))
+    - Term x within document y
 
-   
-## 작성...
+## 자연어 처리 단계 
 
-* ETRI 액소브레인: 언어능력이 높은 인공지능 
-* KorBERT(ETRI 국산 언어모델): 학습한 택스트 양이 23Gbyte, 형태소 개수: 47억개 
+자연어 처리는 기본적으로 문장을 분석하여 문장을 이해하고 이를 바탕으로 전체 내용을 파악하려는 작업으로 다음과 같은 단계로 이루어 진다. 
 
-
-## 관련 사이트 
-* ETRI 인공지능 Open API 서비스
-  - 언어분석 API: 행태소 분석, 개체명 인식, 동음이의어/다의어 분석, 의존 구문 분석, 의미역 인식 API
-  - 어휘관계 분석 API: 어휘에 대한 정보를 검색하고 어휘들 간의 의미적 연관성을 분석하는 API
-  - 질문 분석 API: 사용자의 자연어 질의의 의도를 파악하고 사용자가 요구하는 정답을 찾을 수 있도록 정보를 분석하는 API
-  - 음성인식기: 16 kHz Sampling Rate로 녹음된 음성신호에 대해 한국어, 영어, 비원어민이 발성한 영어 음성에 대한 발음 평가 
-  
-  
-
-
+* 전처리(Pre-processing)
+	- 개행문자, 특수문자, 공백, 불용어, 조사, 이메일 링크 제거, 중복 표현 제어, 띄어쓰기, 문장분리 보정 등이 이루어 진다.   
+* 토큰화(Tokenizing)
+	- 토큰화 방법에는 어절 토큰화, 형태소 토큰화, n-gram 토큰화, WordPiece 토큰화 등이 있다. 
+* 어휘 분석(Lexical analysis)
+	- 형태소 분석(morphological analysis): 입력된 문자열을 분석하여 형태소 단위로 분해하는 과정
+	- 개체명 인식
+	- 상호 참조
+* 구문 분석(sytantic analysis)
+	- 문장이나 구절을 만드는 규칙인 구문에 따라 문장이 가지는 구문 구조를 분석하여 문장을 구성하는 문자열들이 문장에서 어떤 역할을 하는지 결정하는 과정 
+	- "나는 책을 읽는다"라는 문장에서 "나는"은 주어로, "책을"은 목적어로, "읽는다"는 서술어로 분석
+	- 구문 분석 결과는 보통 트리 형태로 표현 - 문장을 구문 분석하여 파스 트리(parse tree)를 만들어 내는 작업(파싱: parsing)이 요구됨
+* 의미 분석(segmantic analysys)
+	- 구문 분석의 결과를 해석하여 문장의 의미를 결정하는 과정 
+	- 직설적인 문장은 형태소의 의미를 결합하여 의미를 유추할 수 있으나 은유나 직유와 같은 비유법을 사용한 문장의 의미를 유추하기 위해서는 배경지식이 필요
+* 화용 분석(prgramatic analysis)
+	- 실제 상황적 맥락 (말하는 이와 듣는 이의 관계, 시간과 장소, 주제를 고려하여 문장이 실세계와 가지는 연관 관계)을 분석하여 대화의 의도를 파악하는 과정
+	
 ## 참고사이트 
 
 * [NLP논문 구현 (Transformer, GPT, EBRT, T5) - Reinforce NLP](https://paul-hyun.github.io/implement-paper/)
@@ -63,6 +56,9 @@
 * [딥러닝을 이용한 자연어 처리 입문](https://wikidocs.net/book/2155)
 * [실습으로 배우는 데이터 사이언스](https://programmers.co.kr/learn/courses/21)
 * [딥러닝 기반 자연어처리 기법의 최근 연구동향](https://ratsgo.github.io/natural%20language%20processing/2017/08/16/deepNLP/)
+* 이건명, "인공지능 - 튜링 테스트에서 딥러닝까지", 생능출판사
+* [솔트룩스 ADAMS.ai 플랫폼](https://www.adams.ai/overview) 
+
 
 
 
