@@ -109,5 +109,7 @@
 ## 관련사이트 
 
 * [AI Dev - 인공지능 개발자 모임](http://aidev.co.kr/)
+* [W3C Working on Web and Machine Learning](https://www.w3.org/2020/06/machine-learning-workshop/presentations.html)
+
 
 
