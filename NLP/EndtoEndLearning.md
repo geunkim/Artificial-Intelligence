@@ -70,7 +70,7 @@
 ![equation](http://latex.codecogs.com/gif.latex?n)의 ![equation](http://latex.codecogs.com/gif.latex?h_i)의 중요도를 나타내는 ![equation](http://latex.codecogs.com/gif.latex?\alpha_i^n)를 가중합을 하여 시점 ![equation](http://latex.codecogs.com/gif.latex?n)의 디코더에 대한 맥락 정보 
 ![equation](http://latex.codecogs.com/gif.latex?c_n)을 계산한다.
 
-![equation](http://latex.codecogs.com/gif.latex?c_n=\sum_{i=1}^N\alpha_i^n h_i)
+![equation](http://latex.codecogs.com/gif.latex?c_n=\sum_{i=1}^N\alpha_i^n)
 
 앞의 그림의 주목 메커니즘은 시점 ![equation](http://latex.codecogs.com/gif.latex?n)의 인코더 상태인
 ![equation](http://latex.codecogs.com/gif.latex?h_i)의 중요도 
@@ -83,9 +83,9 @@
 ![equation](http://latex.codecogs.com/gif.latex?h_i)가 서로 부합되는 점수
 ![equation](http://latex.codecogs.com/gif.latex?score(s_{n-1},h_i))를 나타낸다.
 이 점수는 은닉층의 하나인 다층 퍼셉트론의 학습을 통해서 다음과 같이 결정된다.
-![equation](http://latex.codecogs.com/gif.latex?e_i^n=v^T tanh(W_{\alpha}s_{t-1}+U_{\alpha}h_i))
+![equation](http://latex.codecogs.com/gif.latex?e_i^n=v^T \tanh{x})
 
-위 식에서 ![equation](http://latex.codecogs.com/gif.latex?v), ![equation](http://latex.codecogs.com/gif.latex?W_{\alpah}), ![equation](http://latex.codecogs.com/gif.latex?U_{\alpha})
+위 식에서 ![equation](http://latex.codecogs.com/gif.latex?v), ![equation](http://latex.codecogs.com/gif.latex?W_{\alpha}), ![equation](http://latex.codecogs.com/gif.latex?U_{\alpha})
 는 학습될 가중치이다 
 
 주목 메커니즘에서의 이들 가중치는 인코더-디코더 망이 학습될 때 함께 학습된다. 
@@ -98,5 +98,5 @@
 
 인코더 각 상태의 중요도의 합은 1이 된다.
 
-![equation](http://latex.codecogs.com/gif.latex?e_i^n=\fract{exp(e_i^n)}{\sum_{k=1}^Nexp(e_k^n)})
+![equation](http://latex.codecogs.com/gif.latex?e_i^n=\fract{exp(e_i^n)}{\sum_{k=1}^N\exp(e_k^n)})
 
