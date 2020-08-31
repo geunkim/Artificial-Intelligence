@@ -70,7 +70,7 @@
 ![equation](http://latex.codecogs.com/gif.latex?n)의 ![equation](http://latex.codecogs.com/gif.latex?h_i)의 중요도를 나타내는 ![equation](http://latex.codecogs.com/gif.latex?\alpha_i^n)를 가중합을 하여 시점 ![equation](http://latex.codecogs.com/gif.latex?n)의 디코더에 대한 맥락 정보 
 ![equation](http://latex.codecogs.com/gif.latex?c_n)을 계산한다.
 
-![equation](http://latex.codecogs.com/gif.latex?c_n=\sum_{i=1}^N\alpha_i^n)
+![equation](http://latex.codecogs.com/gif.latex?c_n=\sum_{i=1}^N\alpha_i^n(h_i))
 
 앞의 그림의 주목 메커니즘은 시점 ![equation](http://latex.codecogs.com/gif.latex?n)의 인코더 상태인
 ![equation](http://latex.codecogs.com/gif.latex?h_i)의 중요도 
