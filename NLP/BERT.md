@@ -2,9 +2,10 @@
 
 ## 개요
 
-BERT는 2018년 11월 구글의 Jacob Devlin과 동료가 만들어 공개한 트랜스포머 기반 언어 모델로 새로운 
-Language Representation Model이다.  
-BERT는 언어표현 사전학습의 새로운 방법으로 위키피디아와 같은 대량의 텍스트 코퍼스(corpus)를 이용한 비지도 학습(unsupervised learning) 방식을 택하였고 범용 목적의 언어 이해(language understanding) 모델을 혼련시키는 것을 목적으로 하는 **사전 훈련 언어모델**이다. 
+BERT는 2018년 11월 구글의 Jacob Devlin과 동료가 만들어 공개한 트랜스포머 인코더 기반 언어 모델로 새로운 언어 표현 모델(Language Representation Model)이다.
+
+
+BERT는 언어표현 사전학습의 새로운 방법으로 위키피디아와 같은 대량의 텍스트 코퍼스(corpus)를 이용한 비지도 학습(unsupervised learning) 방식을 택하였고 범용 목적의 언어 이해(language understanding) 모델을 혼련시키는 것을 목적으로 하는 **사전 훈련 언어모델**이다.
 
 자연어 처리를 위한 임베딩 방식으로 BERT등장 이전의 Word2Vec, GloVe, Fasttext 방식을 많이 사용하였다. 
 
