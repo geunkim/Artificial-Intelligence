@@ -7,10 +7,7 @@
 	- ![equation](http://latex.codecogs.com/gif.latex?h(t)=f(h(t-1),x(t)))
 * 디코더
 	- 현재의 상태는 이전 출력과 이전 상태, 컨텍스트 상태에 의해 결정
-	- ![equation](http://latex.codecogs.com/gif.latex?s(t)=f(s(t-1),y(t-1), c))
-
-
-
+	- ![equation](http://latex.codecogs.com/gif.latex?s(t)=f(s(t-1),y(t),c))
 
 
 
