@@ -4,4 +4,5 @@
 
 * [Google AI](https://ai.google/about)
   > [Responsible AI Practices](https://ai.google/responsibilities/responsible-ai-practices/)
-  > 
+    - best way to build fairness, interpretability, privacy, and security 
+    
