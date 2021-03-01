@@ -44,6 +44,13 @@ XAI는 인공지능 연구원들이 인공지능을 개선하기 위해 사용�
   + I know when to trust you. (믿을 시점을 안다)
   + I know why you erred (왜 잘못했는지 안다)
 
+#### DARPA XAI의 세 갈래
+  
+  + DARPA는 성능(Performance)와 설명 가능성(Explainability) 간 trade off를 개선할 수 있는 세 가지 XAI 기법을 설명 
+    - Deep Explaination (딥러닝에 대한 설명 모델 개발): 설명 가능한 특성을 학습하기 위해 수정된 딥러닝 기술  
+    - Interpretable Models (해석 가능한 모델): 보다 구조화된 해석 가능한 인과 모델을 학습하는 기술
+    - Model Induction (귀납적 모델): 블랙박스로서 모든 모델에서 설멍 가능한 모델을 추론하는 기술 
+ 
 ## References
 
 [1] 안재현, 설명가능한 인공지능, 인공지능을 해부하다. 
