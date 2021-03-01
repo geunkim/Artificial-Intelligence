@@ -15,6 +15,11 @@
 * 파이터치(PhyTouch)
 * [케라스(Keras)](https://keras.io)
 
+## Trustworthy AI (신뢰성있는 인공지능) 관련 자료 
+
+* [Mozilla's Approach to Trustworthy Artificial Intelligence (AI)](https://foundation.mozilla.org/en/blog/mozillas-approach-to-trustworthy-artificial-intelligence-ai/?utm_source=newsletter-mofo&utm_medium=email&utm_campaign=AIwhatweredoing&utm_term=5167532
+
+
 
 ## 개발환경 구축
 
@@ -102,8 +107,7 @@
 * Md. Z. Alom, et. al., ["A State-of-the-Art Survey on Deep Learning Theory and Architectures,"](https://www.mdpi.com/2079-9292/8/3/292)
 
 ### Articles
-
-* [Mozilla's Approach to Trustworthy Artificial Intelligence (AI)](https://foundation.mozilla.org/en/blog/mozillas-approach-to-trustworthy-artificial-intelligence-ai/?utm_source=newsletter-mofo&utm_medium=email&utm_campaign=AIwhatweredoing&utm_term=5167532)
+)
 
 
 ## 관련사이트 
