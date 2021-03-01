@@ -43,25 +43,29 @@
 
 ### 인터넷 정보
 
-[텐서플로 코리아](facebook.com/groups/TensorFlowKR)
+* [텐서플로 코리아](facebook.com/groups/TensorFlowKR)
 
-[텐서플로 볼로그: tensorflowkorea.wordpress.com] (deprecated)
+*[텐서플로 볼로그: tensorflowkorea.wordpress.com] (deprecated)
 
-[텐서플로우](https://tensorflow.org) 
+* [텐서플로우](https://tensorflow.org) 
 
-[텐서플로우 튜토리얼](https://www.tensorflow.org/tutorials/)
+* [텐서플로우 튜토리얼](https://www.tensorflow.org/tutorials/)
 
-[케라스 창시자로부터 배우는 TensorFlow 2.0 + Keras 특강](https://colab.research.google.com/drive/1Nz6RkuBOEh_Ah11NSRKRO_YCt1C-8Eze)
+* [케라스 창시자로부터 배우는 TensorFlow 2.0 + Keras 특강](https://colab.research.google.com/drive/1Nz6RkuBOEh_Ah11NSRKRO_YCt1C-8Eze)
   - 박창선 님의 번역본에서 TensorFlow 설치부분만 제거
   
-[파이토치(PyTouch) 튜토리얼](https://tutorials.pytorch.kr/)
+* [파이토치(PyTouch) 튜토리얼](https://tutorials.pytorch.kr/)
 
-[홍대 머신러닝 스터디](https://www.meetup.com/ko-KR/Hongdae-Machine-Learning-Study/)
+* [홍대 머신러닝 스터디](https://www.meetup.com/ko-KR/Hongdae-Machine-Learning-Study/)
 
-[박해선 블로그](https://tensorflow.blog)
+* [박해선 블로그](https://tensorflow.blog)
 
-[AI Korea](http://aikorea.org): 인공지능을 좋아하는 사름들의 모임
+* [AI Korea](http://aikorea.org): 인공지능을 좋아하는 사름들의 모임
 
+* [Keras Examples](http://keras.io/example): Keras를 사용한 예제 
+  - [설명 영상](https://youtu.be/Y2K13XDqwiM)
+
+* [TensorFlow KR](https://www.facebook.com/groups/TensorFlowKR/)
 
 
 ### Study Site
@@ -99,15 +103,12 @@
   - [파이프라인을 작성해봅시다 - 머신러닝 비법 #4](https://www.youtube.com/watch?v=84gqSbLcBFE)
   - 
   
-
-
 ### Papers
 
 * F. Richard Yu, "From the Internet of Information to the Internet of Intelligence," arXiv:1909.08068v1
 * Md. Z. Alom, et. al., ["A State-of-the-Art Survey on Deep Learning Theory and Architectures,"](https://www.mdpi.com/2079-9292/8/3/292)
 
 ### Articles
-)
 
 
 ## 관련사이트 
