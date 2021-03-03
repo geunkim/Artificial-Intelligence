@@ -45,11 +45,20 @@ XAI는 인공지능 연구원들이 인공지능을 개선하기 위해 사용�
 
 #### DARPA XAI의 세 갈래
   
-  + DARPA는 성능(Performance)와 설명 가능성(Explainability) 간 trade off를 개선할 수 있는 세 가지 XAI 기법을 설명 
-    - Deep Explaination (딥러닝에 대한 설명 모델 개발): 설명 가능한 특성을 학습하기 위해 수정된 딥러닝 기술  
-    - Interpretable Models (해석 가능한 모델): 보다 구조화된 해석 가능한 인과 모델을 학습하는 기술
-    - Model Induction (귀납적 모델): 블랙박스로서 모든 모델에서 설멍 가능한 모델을 추론하는 기술
-  * 이 세 가지 XAI 기법을 적용할 수 있는 상황과 효용에 따라 선별적으로 사용 가능
+* DARPA는 성능(Performance)와 설명 가능성(Explainability) 간 trade off를 개선할 수 있는 세 가지 XAI 기법을 설명 
+  - Deep Explaination (딥러닝에 대한 설명 모델 개발): 설명 가능한 특성을 학습하기 위해 수정된 딥러닝 기술  
+  - Interpretable Models (해석 가능한 모델): 보다 구조화된 해석 가능한 인과 모델을 학습하는 기술
+  - Model Induction (귀납적 모델): 블랙박스로서 모든 모델에서 설멍 가능한 모델을 추론하는 기술
+* 이 세 가지 XAI 기법을 적용할 수 있는 상황과 효용에 따라 선별적으로 사용하여야 함
+
+#### 블랙박스 들여다 보기
+
+* XAI: 머신러닝 모델의 블랙박스 을 인간이 이해할 수 있는 수준까지 분해하는 것
+* 인공지능의 해석 가능성: 머신러닝이 내린 결정의 근거를 인간이 이해할 수 있게 변이하는 과정 
+
+* 특성 중요도 (Feature Importance): 모델이 의사 결정을 수행하는 과정에서 어떤 특성이 
+ 
+  
  
 ## References
 
