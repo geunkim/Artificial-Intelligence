@@ -116,6 +116,7 @@
 * [AI Dev - 인공지능 개발자 모임](http://aidev.co.kr/)
 * [W3C Working on Web and Machine Learning](https://www.w3.org/2020/06/machine-learning-workshop/presentations.html)
 * [NIST-AI](https://www.nist.gov/topics/artificial-intelligence)
+* [카오스 재단의 AI X](https://ikaos.org/kaos/video/view.php?id=821) (id:812에서 부터 821까지 10개이 동영상)
 
 
 
