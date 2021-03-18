@@ -15,3 +15,4 @@
     * 데이터 중요도를 특정하는 평가 값은 새플리 지표를 연속학습이 적용하여 기존 방식 대비 최대 40%까지 학습 성능을 향상시키는 기술을 개발 
     * 
     
+* [Microsoft Trustworthy](https://www.microsoft.com/en-us/research/project/trustworthy-ai/)
