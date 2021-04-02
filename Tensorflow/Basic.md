@@ -167,7 +167,7 @@ class ResNet(tf.keras.Model):
 		+ 하나 또는 그 이상 이어지는 ragged 차수
 		+ 제로 또는 그 이상 이어지는 정형 차수 
 
-* Ragged Tensor의 구성하는 바업ㅂ 
+* Ragged Tensor의 구성하는 방법 
 
 	- (방법 1) tf.ragged.constand() 를 사용하는 것 
 
@@ -178,6 +178,65 @@ class ResNet(tf.keras.Model):
 				])
 	print(sentences)
 ```
+
+패딩된 요소를 가지는 파이썬 리스트나 이전 형식의 텐서로 부터 Ragged Tensor를 생성할 수 있다. 이전 버전의 Tensorflow로 작성된 하위 단계의 파이프라인 데이터를 사용하여 TF 2.0 모델을 구축할 때 유용하다. 이는 ``tf.RaggedTensor.from_tensor()``함수에 의해 가능하다.
+
+```python
+x = [[1, 7, 0, 0, 0],
+	 [2, 0, 0, 0, 0],
+	 [4, 5, 8, 9, 1],
+	 [1, 0, 0, 0, 0]
+    ]
+
+print(tf.RaggedTensor.from_tensor(x, padding=0))
+```
+
+* Ragged Tensor의 기본 연산 (더하기) 
+
+```python
+x = tf.ragged.constant([
+                       [1, 2, 3, 4],
+                       [1, 2]
+                      ])
+
+y = tf.ragged.constant([
+                       [4, 3, 2, 1],
+                       [5, 6]
+])
+print(tf.add(x, y))
+```
+
+* Ragged Tensor의 곱셈 
+
+```python
+x = tf.ragged.constant([
+                        [1, 2, 3, 4],
+                        [1, 2]
+])
+
+print(x * 2)
+print(x * x)
+```
+
+[Code](https://colab.research.google.com/drive/1uGoCXqVSCxlhEr2DRm4jhccn5plt1kqO?usp=sharing)
+
+* Tensorflow Addon(TF Addons) 
+  - 최신의 레이어, 손실 함수, 초기화기, 최적화기 같은 것 들이 TF 2.0 오브젝트의 형태로 포함
+  - TF Addons에서 가져온 API들을 추가 변경없이 일반적인 ``tf.keras`` 모델로 완벽하게 통합할 수 있음
+
+
+* Tensorflow Text: 
+  - TF2.0에 NLP API가 추가된 최신의 모듈
+  - NLP 분야에서 널리 사용되는 기술 중 문장 및 단어의 토큰화와 같은 메소드가 포함
+
+* Tensorflow Probability
+  - Tensorflow에서 확률 계산을 위한 API
+
+## Reference
+
+* A. Baranwal, A. Khatri, T. Baranwal, "새롭게 배우는 텐서플로우 2.0"
+
+
 
 
 
